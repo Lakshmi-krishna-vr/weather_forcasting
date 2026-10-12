@@ -1,0 +1,97 @@
+{
+  "dataset": "jena",
+  "split": "train \u22642014, val 2015, test 2016",
+  "targets": [
+    "T",
+    "p",
+    "rh",
+    "wv"
+  ],
+  "features": 22,
+  "parameters": 35480,
+  "epochs_run": 65,
+  "best_epoch": 53,
+  "chaos_thresholds": [
+    0.275,
+    0.307
+  ],
+  "spearman_chaos_vs_error": {
+    "T": 0.214,
+    "p": 0.053,
+    "rh": 0.205,
+    "wv": 0.122,
+    "overall": 0.129
+  },
+  "T Persistence": {
+    "MAE": 0.4339,
+    "RMSE": 0.6738,
+    "R2": 0.9932,
+    "skill": 0.0
+  },
+  "T Ridge": {
+    "MAE": 0.3186,
+    "RMSE": 0.4948,
+    "R2": 0.9963,
+    "skill": 0.2657
+  },
+  "T LSTM\u2192GRU": {
+    "MAE": 0.2715,
+    "RMSE": 0.4333,
+    "R2": 0.9972,
+    "skill": 0.3741
+  },
+  "p Persistence": {
+    "MAE": 0.1922,
+    "RMSE": 0.2762,
+    "R2": 0.999,
+    "skill": 0.0
+  },
+  "p Ridge": {
+    "MAE": 0.149,
+    "RMSE": 0.2153,
+    "R2": 0.9994,
+    "skill": 0.2244
+  },
+  "p LSTM\u2192GRU": {
+    "MAE": 0.1243,
+    "RMSE": 0.1828,
+    "R2": 0.9996,
+    "skill": 0.3532
+  },
+  "rh Persistence": {
+    "MAE": 1.9723,
+    "RMSE": 3.1506,
+    "R2": 0.9614,
+    "skill": 0.0
+  },
+  "rh Ridge": {
+    "MAE": 1.5884,
+    "RMSE": 2.5598,
+    "R2": 0.9745,
+    "skill": 0.1947
+  },
+  "rh LSTM\u2192GRU": {
+    "MAE": 1.4288,
+    "RMSE": 2.3811,
+    "R2": 0.978,
+    "skill": 0.2756
+  },
+  "wv Persistence": {
+    "MAE": 0.5593,
+    "RMSE": 0.7918,
+    "R2": 0.7343,
+    "skill": 0.0
+  },
+  "wv Ridge": {
+    "MAE": 0.5166,
+    "RMSE": 0.7187,
+    "R2": 0.7811,
+    "skill": 0.0764
+  },
+  "wv LSTM\u2192GRU": {
+    "MAE": 0.4989,
+    "RMSE": 0.6995,
+    "R2": 0.7927,
+    "skill": 0.108
+  }
+}

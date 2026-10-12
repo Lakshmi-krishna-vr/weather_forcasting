@@ -1,0 +1,6 @@
+,Temperature,Temperature,Temperature,Pressure,Pressure,Pressure,Relative humidity,Relative humidity,Relative humidity,Wind speed,Wind speed,Wind speed,windows
+,LSTM→GRU (°C),Persistence (°C),Skill,LSTM→GRU (mbar),Persistence (mbar),Skill,LSTM→GRU (%),Persistence (%),Skill,LSTM→GRU (m/s),Persistence (m/s),Skill,
+weather_state,,,,,,,,,,,,,
+Stable,0.25204697,0.35662243,0.29323858,0.12287772,0.19284426,0.3628137,1.3212223,1.6969179,0.22139883,0.49006912,0.54616845,0.1027143,27396
+Moderately Unpredictable,0.2902003,0.49021697,0.40801662,0.12594835,0.19232759,0.34513628,1.5235097,2.1735847,0.29907966,0.50904393,0.5733518,0.11216128,18396
+Highly Unpredictable,0.29977372,0.59343755,0.49485213,0.1255575,0.18908668,0.33597916,1.6068444,2.5401814,0.36742926,0.5070421,0.5743314,0.117161095,6763

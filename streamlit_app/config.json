@@ -1,0 +1,80 @@
+{
+  "dataset": "jena",
+  "split": "train \u22642014, val 2015, test 2016",
+  "input_steps": 144,
+  "output_steps": 6,
+  "feature_columns": [
+    "T",
+    "p",
+    "rh",
+    "Tdew",
+    "wv",
+    "Wx",
+    "Wy",
+    "hour_sin",
+    "hour_cos",
+    "doy_sin",
+    "doy_cos",
+    "temperature_rolling_mean",
+    "temperature_rolling_std",
+    "pressure_rolling_mean",
+    "humidity_rolling_mean",
+    "temperature_change",
+    "temperature_change_1h",
+    "pressure_change_1h",
+    "humidity_change",
+    "wind_rolling_mean",
+    "wind_rolling_std",
+    "wind_change_1h"
+  ],
+  "targets": [
+    "T",
+    "p",
+    "rh",
+    "wv"
+  ],
+  "units": {
+    "T": "\u00b0C",
+    "p": "mbar",
+    "rh": "%",
+    "wv": "m/s"
+  },
+  "residual_target": true,
+  "output_layout": "flat index = step * n_targets + target",
+  "phys_limits": {
+    "rh": [
+      0,
+      100
+    ],
+    "wv": [
+      0,
+      null
+    ]
+  },
+  "chaos_thresholds": [
+    0.27480217214627745,
+    0.3065447455402415
+  ],
+  "best_epoch": 53,
+  "epochs_run": 65,
+  "model_mae": {
+    "T": 0.27154359221458435,
+    "p": 0.12429735064506531,
+    "rh": 1.428784728050232,
+    "wv": 0.49889519810676575
+  },
+  "error_std": {
+    "T": 0.4327996075153351,
+    "p": 0.18258057534694672,
+    "rh": 2.380153179168701,
+    "wv": 0.6993405818939209
+  },
+  "architecture": "Input (144 \u00d7 22) \u2192 GaussianNoise(0.05) \u2192 LSTM(64) \u2192 LayerNorm \u2192 Dropout(0.3) \u2192 GRU(32) \u2192 Dropout(0.3) \u2192 Dense(64) \u2192 Dense(6 \u00d7 4)",
+  "regularisation": {
+    "input_noise": 0.05,
+    "dropout": 0.3,
+    "weight_decay": 0.0001,
+    "train_stride": 6,
+    "min_lr": 0.0001
+  }
+}
